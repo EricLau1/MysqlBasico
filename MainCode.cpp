@@ -31,6 +31,12 @@ void linha() {
 void amarelo();
 void branco();
 
+//Comandos para relacionar tabelas
+void interactiveTables();
+void addForeignKeyReferences();
+void selectFromJoin();
+
+
 //Comandos de vizualização
 void visualComands();
 void selectFrom();
@@ -39,6 +45,8 @@ void selectFromWhere();
 void selectFromWhereLike();
 void selectDistinct();
 void selectCount();
+void selectFromGroupBy();
+void selectFromGroupByHaving();
 
 //Comandos de Inserção
 void insertComands();
@@ -80,10 +88,12 @@ void menuMySql() {
 		cout << "COMANDOS MYSQL";
 		gotoxy(T, 10);
 		cout << "1- CREATE COMANDS";
-		gotoxy(T, 11);
-		cout << "2- INSERT COMANDS";
 		gotoxy(T, 12);
+		cout << "2- INSERT COMANDS";
+		gotoxy(T, 14);
 		cout << "3- VISUAL COMANDS";
+		gotoxy(T, 16);
+		cout << "4- INTERACTIVE TABLES";
 
 		gotoxy(T-10, 25);
 		cout << "digite 0 para sair ou voltar de um menu";
@@ -103,6 +113,10 @@ void menuMySql() {
 		}
 		case(3): {
 			visualComands();
+			break;
+		}
+		case(4): {
+			interactiveTables();
 			break;
 		}
 		default: {
@@ -135,7 +149,100 @@ int main() {
 
 }
 
-//Comandos de Visualização de dados
+//Relacionamento entre Tabelas
+
+void interactiveTables() {
+	int opcao;
+	bool ativo = true;
+	while (ativo) {
+		gotoxy(T, 1);
+		cout << "RELACIONAMENTO ENTRE TABELAS";
+		gotoxy(T, 5);
+		cout << "1- CHAVE ESTRANGEIRA";
+		gotoxy(T, 6);
+		cout << "2- SELECT FROM INNER JOIN";
+		
+		gotoxy(T, 20);
+		cout << "Escolha uma opção:";
+		cin >> opcao;
+		system("cls"); //limpa tela
+		switch (opcao) {
+		case(1): {
+			addForeignKeyReferences();
+			break;
+		}
+		case(2): {
+			selectFromJoin();
+			break;
+		}
+		default: {
+			ativo = false;
+			break;
+		}
+		}//fim switch
+		system("cls");
+	}//fim while
+}
+
+
+void selectFromJoin() {
+	cout << "SELECT FROM JOIN AND INNER JOIN";
+	gotoxy(T, 5);
+	cout << "O JOIN fara uma junção entre tabelas, ou seja, duas tabelas serão mostradas ao mesmo tempo";
+	gotoxy(T, 7);
+	cout << "Segue o exmeplo:";
+	gotoxy(T, 9);
+	amarelo();
+	cout << "mysql> select tabela1.atributo, tabela2.atributo from `tabela1` join `tabela2`;";
+	branco();
+	gotoxy(T, 11);
+	cout << "O comando acima mostra os atributos selecionados das duas tabelas. O problema é";
+	gotoxy(T, 13);
+	cout << "que como não existe nada especificando a relação entra as duas os dados ficarão";
+	gotoxy(T, 15);
+	cout << "desajustados. Para melhorar isso é preciso seguir algum passos. Segue o exemplo:";
+	amarelo();
+	gotoxy(T, 17);
+	cout << "mysql> select tabela1.atributo, tabela2.atributo from `tabela1` inner join `tabela2`";
+	gotoxy(T, 19);
+	cout << "where tabela.chaveestrangeira = tabela2.chaveprimaria;";
+	branco();
+	gotoxy(T, 21);
+	cout << "Agora mostrará apenas os atributos das duas tabelas que estão relacionados pela chave";
+	gotoxy(T, 23);
+	cout << "estrangeira. Lembrando que essas chaves são os atributos que correspondem a cada tabela";
+	getch();
+}
+
+void addForeignKeyReferences() {
+	cout << "CHAVE ESTRANGEIRA";
+	gotoxy(T, 5);
+	cout << "Para que exista uma chave estrangeira é preciso que haja algum relacionamento entre duas tabelas";
+	gotoxy(T, 7);
+	cout << "A chave estrangeira de uma tabela é a chave primária da outra";
+	gotoxy(T, 9);
+	cout << "Para que uma tabela tenha uma chave estrangeira  é preciso que ela tenha um atributo do mesmo tipo";
+	gotoxy(T, 11);
+	cout << "que a chave primaria da outra tabela. O mesmo ficará encarregado de guardar as chaves primárias,";
+	gotoxy(T, 13);
+	cout << "por isso é chamado de chave estrangeira, pois é uma chave que vem de outro lugar";
+	gotoxy(T, 15);
+	cout << "Segue um exemplo de como adicionar uma chave estrangeira:";
+	gotoxy(T, 17);
+	amarelo();
+	cout << "mysql> alter table `tabela1` add foreign key(`atributo`) references `tabela2`(`chaveprimaria`)";
+	branco();
+	gotoxy(T, 19);
+	cout << "REFERENCES refencia de qual tabela é a chave estrangeira";
+	gotoxy(T, 21);
+	cout << "Quando existem linhas de tabelas relacionadas com chave estrangeira, geralmente os comandos delete";
+	gotoxy(T, 23);
+	cout << "não funcionam";
+	getch();
+}
+
+
+//Comandos de Visualização de dados ----------------------------------------------------------------------------------------------------------
 
 void visualComands() {
 	int opcao;
@@ -146,7 +253,7 @@ void visualComands() {
 		gotoxy(T, 5);
 		cout << "1- SELECT FROM";
 		gotoxy(T, 6);
-		cout << "2- SELECT FROM BY ORDER";
+		cout << "2- SELECT FROM ORDER BY";
 		gotoxy(T, 7);
 		cout << "3- SELECT FROM WHERE";
 		gotoxy(T, 8);
@@ -155,6 +262,10 @@ void visualComands() {
 		cout << "5- SELECT DISTINCT";
 		gotoxy(T, 10);
 		cout << "6- SELECT COUNT MAX MIN SUM AVG";
+		gotoxy(T, 11);
+		cout << "7- SELECT FROM GROUP BY";
+		gotoxy(T, 12);
+		cout << "8- SELECT FROM GROUP BY HAVING";
 
 		gotoxy(T, 20);
 		cout << "Escolha uma opção: ";
@@ -185,6 +296,14 @@ void visualComands() {
 			selectCount();
 			break;
 		}
+		case(7): {
+			selectFromGroupBy();
+			break;
+		}
+		case(8): {
+			selectFromGroupByHaving();
+			break;
+		}
 		default: {
 			ativo = false;
 			break;
@@ -193,6 +312,57 @@ void visualComands() {
 		}//fim switch
 		system("cls");
 	}//fim while
+}
+
+void selectFromGroupByHaving() {
+	cout << "SELECT FROM GROUP BY HAVING";
+	gotoxy(T, 5);
+	cout << "O HAVING é como se fosse um WHERE só que usado após um GROUP BY";
+	gotoxy(T, 7);
+	cout << "significa que ele só funcionará para o atributo que foi agrupado";
+	gotoxy(T, 9);
+	cout << "Ao usar o HAVING o select só irá mostrar o groupo que seguir uma ";
+	gotoxy(T, 11);
+	cout << "condição que será definida. Veja o exemplo:";
+	amarelo();
+	gotoxy(T, 13);
+	cout << "mysql> select `atributo`, count(*) from `tabela` group `atributo` having count(*) > '3';";
+	branco();
+	gotoxy(T, 15);
+	cout << "O comando acima só mostrará grupos maiores que três, ou seja, no mínimo quatro elementos";
+	gotoxy(T, 17);
+	cout << "precisam ter os valores do atributo selecionado semelhantes";
+	gotoxy(T, 19);
+	cout << "Segue mais um exemplo:";
+	amarelo();
+	gotoxy(T, 21);
+	cout << "mysql> select `atributo` from `tabela` where `atributo` = 'valor' group by `atributo`";
+	gotoxy(T, 23);
+	cout << "having `atributo` > (select avg(`atributo`) from `tabela`);";
+	branco();
+	gotoxy(T, 25);
+	cout << "O comando acima seleciona um atributo especifico onde possua um valor determinado no WHERE,";
+	gotoxy(T, 27);
+	cout << "agrupa os elementos que possuem este valor, ou seja os elementos que tem os valores iguais.";
+	gotoxy(T, 29);
+	cout << "E o HAVING irá mostrar somente os atributos agrupados que possuem um valor maior";
+	gotoxy(T, 31);
+	cout << "que a média de todos os valores daquele atributo dentro da tabela";
+	getch();
+}
+
+
+void selectFromGroupBy() {
+	cout << "SELECT FROM GROUP BY";
+	gotoxy(T, 5);
+	cout << "GROUP BY basicamente agrupa todos os elementos iguais. Veja o exemplo:";
+	amarelo();
+	gotoxy(T, 7);
+	cout << "mysql> select `atributo`, count(*) from `tabela` group by `atributo`;";
+	branco();
+	gotoxy(T, 9);
+	cout << "O COUNT(*) serve para mostrar quantos elementos possuem aquele valor";
+	getch();
 }
 
 void selectCount() {
@@ -426,6 +596,7 @@ void insertComands() {
 		}
 		case(3): {
 			alterTableDropColumn();
+			break;
 		}
 		case(4): {
 			alterTableModifyColumn();
@@ -736,28 +907,28 @@ void insertInto() {
 	gotoxy(T, 19);
 	amarelo();
 	cout << "mysql> insert into pessoa (id, nome, nascimento, sexo, altura) values";
-	gotoxy(T, 20);
-	cout << "(default, 'Dipper', '2001-05-10', 'M', '1.58');";
+	gotoxy(T, 21);
+	cout << "(default, 'Nome', '2001-05-10', 'M', '1.58');";
 	branco();
-	gotoxy(T, 22);
+	gotoxy(T, 23);
 	cout << "DEFAULT quer dizer que esse campo vai ser preenchido por um valor padrão que foi";
-	gotoxy(T, 24);
+	gotoxy(T, 25);
 	cout << "definido na criação da tabela";
-	gotoxy(T, 26);
+	gotoxy(T, 27);
 	cout << "É possivel inserir varias linhas na tabela de uma só vez. Segue o exemplo:";
-	gotoxy(T, 28);
+	gotoxy(T, 29);
 	amarelo();
 	cout << "mysql> insert into pessoa (id, nome, nascimento, sexo, altura) values";
-	gotoxy(T, 29);
-	cout << "(default, 'Mabel', '2000-06-11', 'F', '1.59'),";
-	gotoxy(T, 30);
-	cout << "(default, 'Lain', '1996-12-24', 'F', '1.64');";
-	gotoxy(T, 32);
+	gotoxy(T, 31);
+	cout << "(default, 'Nome1', '2000-06-11', 'F', '1.59'),";
+	gotoxy(T, 33);
+	cout << "(default, 'Nome2', '1996-12-24', 'M', '1.64');";
+	gotoxy(T, 35);
 	branco();
 	cout << "Coloque os valores decimais separados por ponto (.)";
-	gotoxy(T, 34);
+	gotoxy(T, 37);
 	cout << "Os parenteses com dados são separados por virgula.";
-	gotoxy(T, 36);
+	gotoxy(T, 39);
 	cout << "O ponto e vírgula(;) será colocado no ultimo.";
 	getch();
 }
@@ -876,18 +1047,20 @@ void createTableIfNotExists() {
 	cout << "e o sistema não irá retornar uma mensagem de erro. Segue um exemplo:";
 	gotoxy(T, 11);
 	amarelo();
-	cout << "mysql> create table if not exists `nomedatabela`(nome varchar(30) unique, idade int(3) unsigned)default charset=utf8;";
-	branco();
+	cout << "mysql> create table if not exists `nomedatabela`(nome varchar(30) unique,";
 	gotoxy(T, 13);
-	cout << "Se existir uma tabela com o mesmo nome a nova não será criada.";
+	cout << "idade int(3) unsigned ) default charset=utf8;";
+	branco();
 	gotoxy(T, 15);
-	cout << "UNIQUE quer dizer que esse campo não vai aceitar nomes repetidos";
+	cout << "Se existir uma tabela com o mesmo nome a nova não será criada.";
 	gotoxy(T, 17);
-	cout << "UNSIGNED siginifica que esse campo não aceita valores negativos ou abaixo de zero";
+	cout << "UNIQUE quer dizer que esse campo não vai aceitar nomes repetidos";
 	gotoxy(T, 19);
+	cout << "UNSIGNED siginifica que esse campo não aceita valores negativos ou abaixo de zero";
+	gotoxy(T, 21);
 	cout << "tambem é possivel usar um comando semelhante para excluir a tabela. Veja o exemplo: ";
 	amarelo();
-	gotoxy(T, 21);
+	gotoxy(T, 23);
 	cout << "mysql> drop table if exists `nomedatabela`;";
 	branco();
 	getch();
@@ -1090,17 +1263,17 @@ void padraoUTF8() {
 	amarelo();
 	gotoxy(T, 11);
 	cout << "mysql> create database `nomedobanco`";
-	gotoxy(T, 12);
-	cout << "default character set utf8";
 	gotoxy(T, 13);
+	cout << "default character set utf8";
+	gotoxy(T, 15);
 	cout << "default collate utf8_general_ci;";
 	branco();
-	gotoxy(T, 15);
-	cout << "Exemplo com tabela:";
 	gotoxy(T, 17);
+	cout << "Exemplo com tabela:";
+	gotoxy(T, 19);
 	amarelo();
 	cout << "mysql> create table `nomedatabela` ([atributos]) default charset = utf8;";
-	gotoxy(T, 19);
+	gotoxy(T, 21);
 	branco();
 	cout << "A sigla utf8 deve ser escrita em minúscula";
 	getch();
@@ -1117,33 +1290,33 @@ void chavePrimaria() {
 	gotoxy(T, 11);
 	amarelo();
 	cout << "mysql> create table `jogador`(";
-	gotoxy(T, 12);
-	cout << "id int not null auto_increment,";
 	gotoxy(T, 13);
-	cout << "nome varchar(20) not null,";
-	gotoxy(T, 14);
-	cout << "nascimento date default '2017-01-01',";
+	cout << "id int not null auto_increment,";
 	gotoxy(T, 15);
+	cout << "nome varchar(20) not null,";
+	gotoxy(T, 17);
+	cout << "nascimento date default '2017-01-01',";
+	gotoxy(T, 19);
 	cout << "sexo enum('M','F'),";
-	gotoxy(T, 16);
+	gotoxy(T, 21);
 	cout << "primary key(id) )default charset=utf8;";
 	branco();
 
-	gotoxy(T, 18);
+	gotoxy(T, 23);
 	cout << "NOT NULL indica que esse campo não aceita nulo. Ele precisará ser preenchido obrigatóriamente.";
-	gotoxy(T, 20);
-	cout << "AUTO_INCREMENT indica que o atributo será incrementado de 1 em 1 a cada nova linha";
-	gotoxy(T, 22);
-	cout << "DATE indica que esse atributo vai receber ANO-MÊS-DIA.";
-	gotoxy(T, 24);
-    cout<<"Não se pode guardar `idade` num banco por que as idades mudam constantemente,";
 	gotoxy(T, 25);
-	cout <<"por isso é preferível guardar a data de nascimento.";
+	cout << "AUTO_INCREMENT indica que o atributo será incrementado de 1 em 1 a cada nova linha";
 	gotoxy(T, 27);
-	cout << "DEFAULT é um parâmentro que vai ser colocado caso o campo não seja preenchido pelo usuário";
+	cout << "DATE indica que esse atributo vai receber ANO-MÊS-DIA.";
 	gotoxy(T, 29);
-	cout << "ENUM('M','F') indica que nesse campo será preenchido apenas o caractere 'M' ou 'F', mais nenhum outro será aceito";
+    cout<<"Não se pode guardar `idade` num banco por que as idades mudam constantemente,";
 	gotoxy(T, 31);
+	cout <<"por isso é preferível guardar a data de nascimento.";
+	gotoxy(T, 33);
+	cout << "DEFAULT é um parâmentro que vai ser colocado caso o campo não seja preenchido pelo usuário";
+	gotoxy(T, 35);
+	cout << "ENUM('M','F') indica que nesse campo será preenchido apenas o caractere 'M' ou 'F', mais nenhum outro será aceito";
+	gotoxy(T, 37);
 	cout << "PRIMARY KEY(id) está definindo que o atributo `id` será a chave primária da tabela.";
 	getch();
 }
