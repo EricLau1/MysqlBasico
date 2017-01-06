@@ -12,6 +12,12 @@ using namespace std;
 
 #define T 40
 
+// M E N S A G E M //
+/*
+ * Desculpe os erros de português meu interesse era só estudar os comandos do MySQL
+*/
+void mensagem();
+
 //Função para direcionar onde o ponteiro sera iniciado
 void gotoxy(int x, int y)
 {
@@ -35,7 +41,10 @@ void branco();
 void interactiveTables();
 void addForeignKeyReferences();
 void selectFromJoin();
-
+void selectFromAs();
+void selectFromLeftRightOuterJoin();
+void relationshipMultTables();
+void selectMultTables();
 
 //Comandos de vizualização
 void visualComands();
@@ -144,7 +153,7 @@ void menuMySql() {
 
 int main() {
 	setlocale(LC_ALL, "");
-
+	mensagem();
 	menuMySql();
 
 }
@@ -161,6 +170,14 @@ void interactiveTables() {
 		cout << "1- CHAVE ESTRANGEIRA";
 		gotoxy(T, 6);
 		cout << "2- SELECT FROM INNER JOIN";
+		gotoxy(T, 7);
+		cout << "3- SELECT FROM AS";
+		gotoxy(T, 8);
+		cout << "4- SELECT FROM LEFT/RIGHT OUTER JOIN";
+		gotoxy(T, 9);
+		cout << "5- RELATIONSHIP MULT TABLES";
+		gotoxy(T, 10);
+		cout << "6- SELECT MULT TABLES";
 		
 		gotoxy(T, 20);
 		cout << "Escolha uma opção:";
@@ -175,6 +192,22 @@ void interactiveTables() {
 			selectFromJoin();
 			break;
 		}
+		case(3): {
+			selectFromAs();
+			break;
+		}
+		case(4): {
+			selectFromLeftRightOuterJoin();
+			break;
+		}
+		case(5): {
+			relationshipMultTables();
+			break;
+		}
+		case(6): {
+			selectMultTables();
+			break;
+		}
 		default: {
 			ativo = false;
 			break;
@@ -182,11 +215,106 @@ void interactiveTables() {
 		}//fim switch
 		system("cls");
 	}//fim while
+
+}
+
+void selectMultTables() {
+	cout << "SELECT MULT TABLES";
+	gotoxy(T, 5);
+	cout << "Primeiro deve-se inserir as chaves estrangeiras na tabela. Segue o exemplo";
+	amarelo();
+	gotoxy(T, 7);
+	cout << "insert into `tabela_meio` (default, 'primaria1' 'primaria2', '2017-01-05');";
+	gotoxy(T, 9);
+	branco();
+	cout << "O comando acima leva em consideração o exemplo anterior na opção 5-";
+	gotoxy(T, 11);
+	cout << "Lembrando que as chaves primarias se tornam chaves estrangeiras ali dentro.";
+	gotoxy(T, 13);
+	cout << "Exemplo de como unir e relacionar as três tabelas:";
+	amarelo();
+	gotoxy(T, 15);
+	cout << "mysql> select t1.atributo, tmeio.atributo, t2.atributo";
+	gotoxy(T, 17);
+	cout << "from tabela1 as t1 inner join tabela_meio as tmeio";
+	gotoxy(T, 19);
+	cout << "on t1.primaria = tmeio.estrangeira1";
+	gotoxy(T, 21);
+	cout << "inner join tabela2 as t2";
+	gotoxy(T, 23);
+	cout << "on tmeio.estrangeira2 = t2.primaria;";
+	branco();
+	getch();
+}
+
+void relationshipMultTables() {
+	cout << "RELAÇÃO ENTRE VARIAS TABELAS";
+	gotoxy(T, 5);
+	cout << "O relacionamento entra varias tabelas ocorre quando um relacionamento entre tabelas tem";
+	gotoxy(T, 7);
+	cout << "cardinalidade N pra N. O que acontece é que o losango que representa a relação entre duas";
+	gotoxy(T, 9);
+	cout << "tabelas, se torna uma entidade que recebera duas chaves estrangeiras, além de ter sua própria";
+	gotoxy(T, 11);
+	cout << "chave primária. As chaves estrangeiras serão as chaves primárias das tabelas relacionadas";
+	gotoxy(T, 13);
+	cout << "Exemplo de como criar uma tabela com duas chaves estrangeiras:";
+	gotoxy(T, 15);
+	amarelo();
+	cout << "mysql> create table `tabela_meio` ( idm int not null auto_increment,";
+	gotoxy(T, 17);
+	cout << "`idtabela1` int, `idtabela2` int, data date,";
+	gotoxy(T, 19);
+	cout << "primariy key (idm),";
+	gotoxy(T, 21);
+	cout << "foreign key(idtabela1) references `tabela1`(`primaria`),";
+	gotoxy(T, 23);
+	cout << "foreign key(idtabela2) references `tabela2`(`primaria`) ) default charset=utf8;";
+	branco();
+	gotoxy(T, 25);
+	cout << "Lembrando que as chaves estrangeiras tem que ser do mesmo TIPO que as primárias.";
+	getch();
+}
+
+void selectFromLeftRightOuterJoin() {
+	cout << "SELECT FROM LEFT/RIGHT OUTER JOIN";
+	gotoxy(T, 5);
+	cout << "LEFT ou RIGHT OUTER para dar prioridade a tabela da esquerda ou da direita";
+	gotoxy(T, 7);
+	cout << "Segue um exeplo:";
+	amarelo();
+	gotoxy(T, 9);
+	cout << "mysql> select t1.atributo, t2.atributo from tabela1 as t1 ";
+	gotoxy(T, 11);
+	cout << "left outer join tabela2 as t2 on t1.estrangeira = t2.primaria; ";
+	gotoxy(T, 13);
+	branco();
+	cout << "No comando acima ele irá mostrar todos os dados do atributo da tabela da esquerda";
+	gotoxy(T, 15);
+	cout << "porém a coluna da tabela da direita só mostrará os dados que tem relação com a esquerda";
+	gotoxy(T, 17);
+	cout << "Caso fosse definido RIGHT OUTER JOIN ele daria preferencia a tabela da direita";
+	getch();
 }
 
 
+void selectFromAs() {
+	cout << "SELECT FROM AS";
+	gotoxy(T, 5);
+	cout << "AS é usado para dar um `apelido` para uma tabela, e é bastante util para encurtar comandos";
+	gotoxy(T, 7);
+	cout << "muito grandes. Vejo o exemplo: ";
+	gotoxy(T, 9);
+	amarelo();
+	cout << "mysql> select t1.atributo, t2.atrbuto from tabela as t1 inner join tabela2 as t2 on t1.atributo = t2.atributo;";
+	branco();
+	gotoxy(T, 11);
+	cout << "O apelido não pode estar entre aspas simples ou duplas afinal ele é o nome da tabela e nao um valor qualquer.";
+	getch();
+}
+
 void selectFromJoin() {
-	cout << "SELECT FROM JOIN AND INNER JOIN";
+	cout << "SELECT FROM JOIN AND INNER JOIN ON";
 	gotoxy(T, 5);
 	cout << "O JOIN fara uma junção entre tabelas, ou seja, duas tabelas serão mostradas ao mesmo tempo";
 	gotoxy(T, 7);
@@ -205,11 +333,13 @@ void selectFromJoin() {
 	gotoxy(T, 17);
 	cout << "mysql> select tabela1.atributo, tabela2.atributo from `tabela1` inner join `tabela2`";
 	gotoxy(T, 19);
-	cout << "where tabela.chaveestrangeira = tabela2.chaveprimaria;";
+	cout << "on tabela.chaveestrangeira = tabela2.chaveprimaria;";
 	branco();
 	gotoxy(T, 21);
-	cout << "Agora mostrará apenas os atributos das duas tabelas que estão relacionados pela chave";
+	cout << "Agora mostrará apenas os atributos das duas tabelas que estão relacionados pela chave.";
 	gotoxy(T, 23);
+	cout << "ON determina que as tabelas estão interligadas pela chave estrangeira e primária.";
+	gotoxy(T, 25);
 	cout << "estrangeira. Lembrando que essas chaves são os atributos que correspondem a cada tabela";
 	getch();
 }
@@ -1332,4 +1462,15 @@ void amarelo() {
 void branco() {
 	HANDLE color = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(color, FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+}
+
+void mensagem() {
+	gotoxy(T, 5);
+	cout << "SÓ UMA MENSAGEM  PARA O CASO DE ALGUEM USAR ISTO ALÉM DE MIM.";
+	gotoxy(T, 7);
+	cout << "DESCULPE OS ERROS DE PORTUGUÊS, EU DIGITEI TUDO SOZINHO.";
+	gotoxy(T, 9);
+	cout<<"MEU INTERESSE ERA SÓ ESTUDAR OS COMANDOS DO MYSQL.";
+	getch();
+	system("cls");
 }

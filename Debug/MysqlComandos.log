@@ -1,72 +1,83 @@
-﻿  MainCode.cpp
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(18): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(131): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+﻿cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+  MainCode.cpp
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(24): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(140): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(214): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(247): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(241): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(276): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(351): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(297): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(365): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(313): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(406): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(344): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(419): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(371): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(458): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(481): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(489): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(495): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(518): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(536): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(545): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(549): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(652): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(588): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(671): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(619): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(696): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(648): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(727): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(675): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(740): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(782): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(757): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(801): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(778): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(826): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(827): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(857): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(844): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(870): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
 c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(887): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(933): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(908): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1066): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(957): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1084): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(974): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1099): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1017): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1118): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1063): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1135): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1196): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1174): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1214): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1201): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1229): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1216): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1248): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1235): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1265): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1252): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1304): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1279): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1331): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
-c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1321): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1346): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1365): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1382): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1409): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1451): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
+c:\users\eric\documents\git-projects\sistemas\mysqlcomandos\maincode.cpp(1474): warning C4996: 'getch': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _getch. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\conio.h(452): note: see declaration of 'getch'
   MysqlComandos.vcxproj -> C:\Users\eric\Documents\git-projects\Sistemas\MysqlComandos\Debug\MysqlComandos.exe
   MysqlComandos.vcxproj -> C:\Users\eric\Documents\git-projects\Sistemas\MysqlComandos\Debug\MysqlComandos.pdb (Partial PDB)
