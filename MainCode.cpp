@@ -96,13 +96,13 @@ void menuMySql() {
 		gotoxy(T, 5);
 		cout << "COMANDOS MYSQL";
 		gotoxy(T, 10);
-		cout << "1- CREATE COMANDS";
+		cout << "1- COMANDOS DE CRIAÇÃO";
 		gotoxy(T, 12);
-		cout << "2- INSERT COMANDS";
+		cout << "2- INSERINDO DADOS";
 		gotoxy(T, 14);
-		cout << "3- VISUAL COMANDS";
+		cout << "3- COMANDOS VISUAIS";
 		gotoxy(T, 16);
-		cout << "4- INTERACTIVE TABLES";
+		cout << "4- INTERAÇÃO ENTRE TABELAS";
 
 		gotoxy(T-10, 25);
 		cout << "digite 0 para sair ou voltar de um menu";
